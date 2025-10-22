@@ -1,13 +1,13 @@
 import { Product, User } from './types';
 
-import quantumImg from './img/Quantum Core Laptop.webp';
-import acousticImg from './img/Acoustic Bliss Headphones.jpg';
-import smartHubImg from './img/Smart Home Hub.jpg';
-import alchemistImg from './img/The Alchemist\'s Secret.jpg';
-import coffeeTableImg from './img/Modernist Coffee Table.jpg';
-import chairImg from './img/Ergo-Comfort Office Chair.webp';
-import gourmetCoffeeImg from './img/Gourmet Coffee Beans.jpg';
-import greenTeaImg from './img/Organic Green Tea.webp';
+import quantumImg from './img/quantum-core-laptop.webp';
+import acousticImg from './img/acoustic-bliss-headphones.jpg';
+import smartHubImg from './img/smart-home-hub.jpg';
+import alchemistImg from './img/the-alchemists-secret.jpg';
+import coffeeTableImg from './img/modernist-coffee-table.jpg';
+import chairImg from './img/ergo-comfort-office-chair.webp';
+import gourmetCoffeeImg from './img/gourmet-coffee-beans.jpg';
+import greenTeaImg from './img/organic-green-tea.webp';
 
 export const INITIAL_PRODUCTS: Product[] = [
   {

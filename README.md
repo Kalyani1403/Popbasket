@@ -117,24 +117,32 @@ These are simple demo routes defined in `server/server.ts` for a minimal backend
 ---
 
 ## Recommended next steps / improvements
-- Replace client-side mock users with server-backed authentication (hash passwords, use JWTs).
-- Add proper input validation and error handling on API routes.
-- Use a shared currency formatter utility and store currency/locale information centrally.
-- Add E2E tests or a Postman collection to exercise API flows.
 
----
 
 ## Troubleshooting & common commands
-- Install: `npm install`
-- Frontend dev: `npm run dev` (Vite)
-- Backend dev (watch): `npm run dev:server`
-- Run backend once: `npx ts-node --require dotenv/config server/server.ts`
 
 If you hit issues, copy the server output and check the `.env` settings and your Atlas network access.
 
----
 
 If you want, I can:
+
+When you build this project for production you can serve it from the site root (`/`) or from a subpath (for example GitHub Pages). Use the `VITE_BASE` environment variable to set the base path before running the build.
+
+Windows cmd (build for `/my-app/`):
+```cmd
+set VITE_BASE=/my-app/
+npm run build
+```
+
+PowerShell:
+```powershell
+$env:VITE_BASE = '/my-app/'; npm run build
+```
+
+The build output will be placed in the `dist/` folder. Images are bundled or copied into `public/img/` by project scripts so they will be included in the final build.
+
+For GitHub Pages, set `VITE_BASE` to `/your-repo-name/` and publish the contents of `dist/` to the `gh-pages` branch or use a GitHub Action for deployment.
+
 - Add a small health-check route that returns DB connection status.
 - Implement server-side authentication (hashing + JWT) and connect the frontend to real login/register API routes.
 - Add currency formatting and locale options.
