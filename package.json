@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "popbasket",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "node scripts/copy-imgs.js",
+    "build": "vite build && tsc -p server/tsconfig.json",
+    "postinstall": "node scripts/copy-imgs.js",
+    "preview": "vite preview",
+    "server": "npx ts-node --project server/tsconfig.json --require dotenv/config server/server.ts",
+    "prestart": "npm run build",
+    "start": "node dist/server.js",
+    "dev:server": "nodemon --watch server --ext ts --exec \"npx ts-node --project server/tsconfig.json --require dotenv/config server/server.ts\""
+  },
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "@types/morgan": "^1.9.10",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2",
+    "morgan": "^1.10.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

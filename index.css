@@ -1,0 +1,14 @@
+/* Minimal global stylesheet to ensure /index.css is served with text/css MIME type.
+   You can add global styles here. Tailwind is loaded via CDN in index.html so this file can remain small.
+*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Example: ensure background matches Tailwind utility used in templates */
+body.bg-gray-50 {
+  background-color: #F9FAFB;
+}
